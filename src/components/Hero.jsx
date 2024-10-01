@@ -2,14 +2,14 @@ import React from 'react';
 
 function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-purple-500 to-blue-500 text-white h-screen flex items-center">
-      <div className="container mx-auto flex flex-col lg:flex-row justify-between items-center px-4">
+    <section className="relative bg-gradient-to-b from-[#443030] to-[#6E66AF] text-white flex items-center h-fit mt-20">
+      <div className="container flex flex-col lg:flex-row justify-between items-center pl-16">
         <div className="lg:w-1/2">
-          <h1 className="text-6xl font-bold">KERL</h1>
-          <p className="text-2xl mt-4">NATURES ESSENCE IN EVERY DROP</p>
+          <h1 className="text-8xl font-bold">KERL</h1>
+          <p className="text-4xl mt-4">NATURES ESSENCE IN EVERY DROP</p>
         </div>
-        <div className="lg:w-1/2">
-          <img src="/path-to-hero-image.png" alt="Hero" className="rounded-full w-full" />
+        <div className="">
+          <img src="Hero.png" alt="Hero" className="h-auto max-h-[1000vh] lg:max-h-[75vh] object-contain" />
         </div>
       </div>
     </section>
