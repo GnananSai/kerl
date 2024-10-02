@@ -1,21 +1,22 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';// Product listing page
+import ProductPageWrapper from './components/ProductsWrapper'; // Wrapper for individual product page
+import Home from './components/Home';
+import '../src/App.css'
 import Header from './components/Header';
-import Hero from './components/Hero';
-import Aboutus from './components/Aboutus';
-import Products from './components/Products';
 import Footer from './components/Footer';
-import './index.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Header />
-      <Hero />
-      <Aboutus/>
-      <Products />
-      <Footer />
-    </div>
+    <Router>
+      <Header/>
+      <Routes>
+        <Route path="/" element={<Home />} /> 
+        <Route path="/product/:productId" element={<ProductPageWrapper />} /> {/* Dynamic ProductPage route */}
+      </Routes>
+      <Footer/>
+    </Router>
   );
-}
+};
 
 export default App;
