@@ -34,13 +34,13 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <div className="mb-4 text-center md:text-left">
             <h3 className="font-bold">Contact Us</h3>
-            <p>+91 6969696969</p>
-            <p>+91 6969696969</p>
+            <p>+91 9567072475</p>
+            <p>+91 9947615755</p>
           </div>
           <div>
             <h3 className="font-bold mb-2 text-center md:text-left">Follow us</h3>
             <div className="flex space-x-6 justify-center md:justify-start">
-              <a href="/" className="text-[#443030]"><FaInstagram size={24} /></a>
+              <a href="https://www.instagram.com/kerl_company?igsh=MWVwOXppeHVzb3l2bA==" className="text-[#443030]"><FaInstagram size={24} /></a>
               <a href="/" className="text-[#443030]"><FaFacebook size={24} /></a>
               <a href="/" className="text-[#443030]"><FaTwitter size={24} /></a>
             </div>

@@ -11,7 +11,7 @@ const Products = () => {
           {ProductData.map((product) => (
             <div key={product.id} className="bg-white rounded-lg shadow-lg p-6">
               <img 
-                src={product.images[0]} 
+                src={product.images[0][0]} 
                 alt={product.name} 
                 className="w-full h-48 md:h-64 object-contain rounded-lg mb-4" 
               />
@@ -22,7 +22,8 @@ const Products = () => {
               <div className="mb-4">
                 {product.Offers && product.Offers.length > 0 && product.Prices.length > 0 ? (
                   <div className="flex items-center space-x-2">
-                    <span className="line-through text-gray-500">Starting from: ₹{product.Prices[0]}</span>
+                    <span className="text-gray-500">Starting from: </span>
+                    <span className="line-through text-gray-500">₹{product.Prices[0]}</span>
                     <span className="text-green-600 font-semibold">Offer: ₹{product.Offers[0]}</span>
                   </div>
                 ) : (

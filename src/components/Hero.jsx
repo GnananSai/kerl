@@ -2,7 +2,7 @@ import React from 'react';
 
 function Hero() {
   return (
-    <section className="relative bg-gradient-to-b from-[#e6f3ff] to-[#d1e6f9] text-gray-800 flex items-center justify-center min-h-[850px] overflow-hidden">
+    <section id="ero" className="relative bg-gradient-to-b from-[#e6f3ff] to-[#d1e6f9] text-gray-800 flex items-center justify-center min-h-[850px] overflow-hidden">
       {/* Detailed Nature Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Layered Organic SVG Background */}
@@ -94,7 +94,7 @@ function Hero() {
         
         <div className="mt-8 flex justify-center items-center space-x-4">
           <a
-            href="#explore"
+            href="#products"
             className="inline-block px-10 py-4 bg-green-500 text-white font-semibold rounded-full 
             hover:bg-green-600 transition duration-300 ease-in-out transform hover:-translate-y-1 
             shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50"
@@ -102,7 +102,7 @@ function Hero() {
             Explore Our Eco-Friendly Solution
           </a>
           <a
-            href="#learn-more"
+            href="#about"
             className="inline-block px-10 py-4 border-2 border-green-500 text-green-800 
             font-semibold rounded-full hover:bg-green-50 transition duration-300 
             ease-in-out transform hover:-translate-y-1 shadow-md"

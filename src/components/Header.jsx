@@ -13,7 +13,7 @@ const Header = () => {
     <header className="bg-white shadow-md fixed top-0 z-50 w-full">
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-16">
         {/* Logo and Brand */}
-        <div className="flex items-center">
+        <a className="flex items-center" href="/#ero">
           <img src="Logo.png" alt="Kerl Logo" className="w-10 h-10 md:w-12 md:h-12" />
           <h1
             className="ml-2 text-2xl md:text-3xl font-bold"
@@ -21,7 +21,7 @@ const Header = () => {
           >
             KERL
           </h1>
-        </div>
+        </a>
 
         {/* Hamburger Menu for Mobile */}
         <div className="md:hidden">
