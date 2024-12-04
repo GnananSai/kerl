@@ -11,7 +11,16 @@ const ProductPage = ({ product, onBackClick }) => {
   }, []);
 
   const handleQuantityChange = (amount) => {
-    setQuantity((prevQuantity) => Math.max(1, prevQuantity + amount));
+    setQuantity((prevQuantity) => {
+      const newQuantity = Math.max(1, prevQuantity + amount);
+      // Update the image index when quantity changes
+      setCurrentImageIndex((prevIndex) =>
+        newQuantity <= product.images.length
+          ? newQuantity - 1 // Ensure the image index corresponds to the quantity
+          : prevIndex
+      );
+      return newQuantity;
+    });
   };
 
   const handlePreviousImage = () => {
@@ -27,7 +36,7 @@ const ProductPage = ({ product, onBackClick }) => {
   };
 
   return (
-    <div className="container mx-auto px-6 md:px-16 py-10 mt-16">
+    <div className="container mx-auto px-6 md:px-16 py-10 md:py-28 mt-16">
       <button
         className="text-gray-500 hover:text-gray-700 text-lg md:text-2xl font-semibold mb-6"
         onClick={onBackClick}
@@ -36,8 +45,8 @@ const ProductPage = ({ product, onBackClick }) => {
       </button>
       <div className="flex flex-col md:flex-row items-start gap-10">
         {/* Image Slider */}
-        <div className="flex flex-col items-center w-full md:w-1/2">
-          <div className="relative w-full">
+        <div className="flex flex-col items-center w-full md:w-1/2 ">
+          <div className="relative w-full p-10">
             <img
               src={product.images[currentImageIndex]}
               alt={product.name}
@@ -91,6 +100,7 @@ const ProductPage = ({ product, onBackClick }) => {
                   onClick={() => {
                     setSelectedSizeIndex(index);
                     setQuantity(1); // Reset quantity when size changes
+                    setCurrentImageIndex(0); // Reset image when size changes
                   }}
                 >
                   {size}
